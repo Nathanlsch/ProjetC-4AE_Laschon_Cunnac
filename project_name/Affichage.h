@@ -13,12 +13,12 @@ private :
 
 public : 
 
-Adafruit_NeoPixel setup();
+    Adafruit_NeoPixel setup();
 
-Affichage();
-void Allumer();
-void Eteindre();
+    Affichage();
+    void Allumer();
+    void Eteindre();
 
 };
 
-#endif;
+#endif

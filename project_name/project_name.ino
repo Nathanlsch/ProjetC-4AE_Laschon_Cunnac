@@ -1,4 +1,5 @@
 #include "Application.h"
+#include "Affichage.h"
 
 Application myApplication;
 
