@@ -2,7 +2,7 @@
 #define CONF_FlO_H
 
 //Reservoir
-#define Pin_Capteur_Ultrason 7
+#define Pin_Capteur_Ultrason 13
 
 //#define 
 
