@@ -3,6 +3,7 @@
 
 //Reservoir
 #define Pin_Capteur_Ultrason 13
+#define Dist_Max 150
 
 //#define 
 

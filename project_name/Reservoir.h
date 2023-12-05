@@ -9,7 +9,6 @@ class Reservoir{
     
     bool Vide;
     long Dist_Fond;
-    long Dist_Max = 15;
     Ultrasonic CapteurUltrason;
     
     public:
@@ -28,6 +27,8 @@ class Reservoir{
     bool getVide();          
     bool EtatReservoir();
     void MAJ();
+    long Pourcentage();
+    //
     void Affichage();
 };
 
