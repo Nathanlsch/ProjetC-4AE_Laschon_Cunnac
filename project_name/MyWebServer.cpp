@@ -1,6 +1,7 @@
 #include "MyWebServer.h"
 
 void MyWebServer::setup() {
+  this->Init();
   Serial.begin(115200);
 
         // Connexion au réseau WiFi

@@ -6,6 +6,11 @@
 #ifndef APPLICATION_H_
 #define APPLICATION_H_
 
+#include "MyWebServer.h"
+#include "MyTime.h"
+#include "Reservoir.h"
+#include <Arduino.h>
+
 /**
   * @class Application
   * @brief Classe Application 
@@ -33,5 +38,10 @@ class Application
      * @brief Fonction de lancement de l'application
     */
     void run(void);
+
+  private :
+    MyWebServer server;
+    Reservoir reservoir;
+    MyTime time;
 };
 #endif

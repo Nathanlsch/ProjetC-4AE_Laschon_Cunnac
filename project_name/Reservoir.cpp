@@ -7,6 +7,10 @@ Reservoir::Reservoir():CapteurUltrason(Pin_Capteur_Ultrason){
     this->Dist_Fond = 150;
   }
 
+Reservoir::~Reservoir(){
+
+}
+
 bool Reservoir::getVide(){
   return this->Vide;
 }
@@ -30,6 +34,7 @@ void Reservoir::MAJ(){
 
 void Reservoir::Affichage(){
   cout << "Distance : " << Dist_Fond << " cm" << endl;
+  delay(1000);
 }
 
 long Reservoir::Pourcentage(){

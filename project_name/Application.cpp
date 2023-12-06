@@ -5,10 +5,9 @@
  *********************************************************************/
 #include "Application.h"
 
-
-Application::Application()
+Application::Application() : server(80)
 {
-  // Code
+  
   ; 
 }
   
@@ -20,13 +19,16 @@ Application::~Application()
 
 void Application::init(void)
 {
-  //code
-    ;
+    server.setup();
+    time.setup();    ;
 }
 
 
 void Application::run(void)
 {
-  // Code
+    server.handleClient();
+    time.MajHeure();
+    reservoir.MAJ();
+    reservoir.Affichage()
     ;
 }
