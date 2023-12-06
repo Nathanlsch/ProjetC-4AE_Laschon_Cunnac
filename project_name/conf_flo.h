@@ -10,8 +10,13 @@
 #define Servo_Angle_O 554
 #define Servo_Angle_180 2200
 
-#define Valeur_Ouverture_Porte 90
-#define Valeur_Fermeture_Porte 0
+#define Valeur_Ouverture_Trappe 0
+#define Valeur_Fermeture_Trappe 90
+
+//Couvercle
+#define Pin_Servo_Couvercle 12
+#define Valeur_Ouverture_Couvercle 180
+#define Valeur_Fermeture_Couvercle 0
 
 //#define 
 
