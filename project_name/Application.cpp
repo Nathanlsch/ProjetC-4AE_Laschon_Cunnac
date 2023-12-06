@@ -20,7 +20,7 @@ Application::~Application()
 
 void Application::init(void)
 {
-  // Code
+  //code
     ;
 }
 
