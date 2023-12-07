@@ -20,7 +20,16 @@ Application::~Application()
 void Application::init(void)
 {
     server.setup();
-    time.setup();    ;
+    time.setup(); 
+    auto distributionFunction = [this]() {
+        this->trappe.Distribution();
+    };
+    server.SetPtr1(distributionFunction);
+    auto couvercleFunction = [this]() {
+        this->couvercle.gestionCouvercle();
+    };
+    server.SetPtr2(couvercleFunction);
+    
 }
 
 
@@ -29,6 +38,6 @@ void Application::run(void)
     server.handleClient();
     time.MajHeure();
     reservoir.MAJ();
-    reservoir.Affichage()
+    reservoir.Affichage();
     ;
 }

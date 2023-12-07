@@ -13,3 +13,9 @@ void Trappe::Open_Door(){
 void Trappe::Close_Door(){
   ServoTrap.write(Valeur_Fermeture_Trappe);
 }
+
+void Trappe::Distribution(){
+  this->Open_Door();
+  delay(2000);
+  this->Close_Door();
+}

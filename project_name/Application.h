@@ -10,6 +10,8 @@
 #include "MyTime.h"
 #include "Reservoir.h"
 #include <Arduino.h>
+#include "Trappe.h"
+#include "Couvercle.h"
 
 /**
   * @class Application
@@ -43,5 +45,7 @@ class Application
     MyWebServer server;
     Reservoir reservoir;
     MyTime time;
+    Couvercle couvercle;
+    Trappe trappe;
 };
 #endif

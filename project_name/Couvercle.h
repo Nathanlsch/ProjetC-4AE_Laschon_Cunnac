@@ -8,6 +8,7 @@ class Couvercle : public Porte{
 
   private:
 
+  int etat;
   Servo ServoCouv;
 
   public:
@@ -17,6 +18,8 @@ class Couvercle : public Porte{
 
   void Open_Door();
   void Close_Door();
+
+  void gestionCouvercle();
 
 };
 

@@ -43,6 +43,9 @@ const char index_html[] PROGMEM = R"=====(
 
   <button id="doseCroquetteButton" onclick="doseCroquette()">Dose croquette</button>
 
+  <button id="couvercleButton" onclick="actionCouvercle()">Couvercle</button>
+
+
   <!-- Afficher l'heure sélectionnée ici -->
   <div>
     <label for="timeInput">Heure de distribution programmée</label>
@@ -93,7 +96,15 @@ const char index_html[] PROGMEM = R"=====(
        appelServeur('/doseCroquette', traiteReponseDose);
     }
 
+    function actionCouvercle() {
+    // Envoi de la requête pour l'action "Couvercle" au serveur
+    appelServeur('/actionCouvercle', traiteReponseCouvercle);
+    }
 
+    function traiteReponseCouvercle(xhttp) {
+      console.log("Action 'Couvercle' effectuée !");
+      // Vous pouvez traiter la réponse du serveur ici si nécessaire
+    }
 
     function appliquerHeure() {
     var selectedTime = document.getElementById('timeInput').value;

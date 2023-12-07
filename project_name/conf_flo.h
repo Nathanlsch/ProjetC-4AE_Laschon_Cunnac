@@ -7,14 +7,14 @@
 
 //Trappe à croquettes
 #define Pin_Servo_Trappe 14
-#define Servo_Angle_O 554
-#define Servo_Angle_180 2200
+#define Servo_Angle_O 580
+#define Servo_Angle_180 2400
 
 #define Valeur_Ouverture_Trappe 0
 #define Valeur_Fermeture_Trappe 90
 
 //Couvercle
-#define Pin_Servo_Couvercle 12
+#define Pin_Servo_Couvercle 0
 #define Valeur_Ouverture_Couvercle 180
 #define Valeur_Fermeture_Couvercle 0
 

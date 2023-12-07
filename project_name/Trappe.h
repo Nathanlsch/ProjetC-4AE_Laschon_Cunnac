@@ -18,6 +18,7 @@ class Trappe : public Porte{
   //Functions
   void Open_Door();
   void Close_Door();
+  void Distribution();
 
 };
 

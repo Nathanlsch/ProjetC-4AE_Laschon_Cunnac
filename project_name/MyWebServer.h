@@ -14,6 +14,8 @@ public:
     void begin();
     void handleClient();
     void Init();
+    void SetPtr1(std::function<void()> IT_function);
+    void SetPtr2(std::function<void()> IT_function);
 
 private:
     String heureSelectionnee;
@@ -25,6 +27,11 @@ private:
     void handleRoot();
     void doseCroquette();
     void handleUpdateHeure();
+    void GestionCouvercle();
+    
+    std::function<void()> ptr1;
+    std::function<void()> ptr2;
+
 
 };
 
