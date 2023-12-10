@@ -3,7 +3,8 @@
 
 //Reservoir
 #define Pin_Capteur_Ultrason 13
-#define Dist_Max 150
+#define Dist_Max 0
+#define dist_fond_vide 68
 
 //Trappe à croquettes
 #define Pin_Servo_Trappe 14

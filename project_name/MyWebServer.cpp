@@ -81,3 +81,7 @@ void MyWebServer::SetPtr2(std::function<void()> IT_function) {
     this->ptr2 = IT_function;
 }
 
+void MyWebServer::SetCroquette(long entier){
+  niveauCroquette = String(entier);
+}
+

@@ -3,7 +3,7 @@
 using namespace std;
 
 Trappe::Trappe(){
-  ServoTrap.attach(Pin_Servo_Trappe, Servo_Angle_O, Servo_Angle_180);
+  ServoTrap.attach(Pin_Servo_Trappe, 700,2200);
 }
 
 void Trappe::Open_Door(){
@@ -16,6 +16,6 @@ void Trappe::Close_Door(){
 
 void Trappe::Distribution(){
   this->Open_Door();
-  delay(2000);
+  delay(200);
   this->Close_Door();
 }

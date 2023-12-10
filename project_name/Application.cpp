@@ -39,5 +39,6 @@ void Application::run(void)
     time.MajHeure();
     reservoir.MAJ();
     reservoir.Affichage();
+    server.SetCroquette(reservoir.Pourcentage());
     ;
 }

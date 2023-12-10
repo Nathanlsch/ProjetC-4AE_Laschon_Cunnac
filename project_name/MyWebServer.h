@@ -5,6 +5,7 @@
 #include <ESP8266WebServer.h>
 #include <ESP8266WiFi.h>
 #include "html.h"
+#include <string>
 
 class MyWebServer {
 public:
@@ -17,6 +18,8 @@ public:
     void SetPtr1(std::function<void()> IT_function);
     void SetPtr2(std::function<void()> IT_function);
 
+    void SetCroquette(long entier);
+
 private:
     String heureSelectionnee;
     String niveauCroquette;
@@ -28,7 +31,7 @@ private:
     void doseCroquette();
     void handleUpdateHeure();
     void GestionCouvercle();
-    
+
     std::function<void()> ptr1;
     std::function<void()> ptr2;
 
