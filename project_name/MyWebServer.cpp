@@ -85,3 +85,7 @@ void MyWebServer::SetCroquette(long entier){
   niveauCroquette = String(entier);
 }
 
+String MyWebServer::getHeureSelect() {
+  return heureSelectionnee+":0";
+}
+

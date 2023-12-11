@@ -7,7 +7,7 @@
 class MyTime {
 
   private :
-    int Heure[2];
+    int Heure[3];
     const long gmtOffset_sec = 3600; // GMT+1 (par exemple, Paris)
     const int daylightOffset_sec = 3600; // Décalage d'été (1 heure en secondes)
     WiFiUDP ntpUDP;
@@ -20,6 +20,8 @@ class MyTime {
     void setup();
 
     void MajHeure();
+
+    String getHeure();
 
 
 };

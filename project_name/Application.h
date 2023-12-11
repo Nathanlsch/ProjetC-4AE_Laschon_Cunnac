@@ -12,6 +12,7 @@
 #include <Arduino.h>
 #include "Trappe.h"
 #include "Couvercle.h"
+#include "Affichage.h"
 
 /**
   * @class Application
@@ -47,5 +48,6 @@ class Application
     MyTime time;
     Couvercle couvercle;
     Trappe trappe;
+    Affichage affichage;
 };
 #endif

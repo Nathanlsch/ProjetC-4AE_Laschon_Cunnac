@@ -19,6 +19,8 @@ public:
     void SetPtr2(std::function<void()> IT_function);
 
     void SetCroquette(long entier);
+    String getHeureSelect();
+
 
 private:
     String heureSelectionnee;
@@ -31,7 +33,6 @@ private:
     void doseCroquette();
     void handleUpdateHeure();
     void GestionCouvercle();
-
     std::function<void()> ptr1;
     std::function<void()> ptr2;
 

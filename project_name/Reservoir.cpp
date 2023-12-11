@@ -4,7 +4,7 @@ using namespace std;
 
 Reservoir::Reservoir():CapteurUltrason(Pin_Capteur_Ultrason){
     this->Vide=EtatReservoir();
-    this->Dist_Fond = 79;
+    this->Dist_Fond = 90;
   }
 
 Reservoir::~Reservoir(){
@@ -38,14 +38,18 @@ void Reservoir::Affichage(){
 }
 
 long Reservoir::Pourcentage() {
-  const long reservoirLength = 68;  // Assuming the reservoir length is 68mm
+    const long reservoirLength = 90;  // Assuming the reservoir length is 68mm
 
-  // Ensure the distance is within the valid range (0 to reservoirLength)
-  long clampedDist = max(0L, min(reservoirLength, this->Dist_Fond));
+    // Ensure the distance is within the valid range (0 to reservoirLength)
+    long clampedDist = std::max(0L, std::min(reservoirLength, this->Dist_Fond));
 
-  // Calculate the percentage based on linear interpolation
-  long percentage = 100 - ((clampedDist * 100) / reservoirLength);
+    // Calculate the percentage based on linear interpolation with floating point division
+    double percentage = 100- static_cast<double>(clampedDist - 20) / 70 * 100;
 
-  cout << percentage << endl;
-  return percentage;
+    // Ensure that the percentage is within the valid range (0 to 100)
+    percentage = std::max(0.0, std::min(100.0, percentage));
+
+    Serial.println(percentage);
+
+    return static_cast<long>(percentage);
 }

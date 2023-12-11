@@ -1,25 +1,24 @@
+// Affichage.h
 #ifndef AFFICHAGE_H
 #define AFFICHAGE_H
 
-#include "conf.h"
-#include "Adafruit_NeoPixel.h"
+#include <Adafruit_NeoPixel.h>
 
 class Affichage {
-
-
-private : 
-    bool Etat;
-    Adafruit_NeoPixel strip;
-
-public : 
-
-    Adafruit_NeoPixel setup();
-
+public:
     Affichage();
+
     void Allumer();
     void Eteindre();
+    void AllumerBlanc();
+    void AllumerProportionnel(int pourcentage);
+    void AllumerRouge();
+    void AllumerVert();
+    void Gestion(int valeur);
 
+private:
+    Adafruit_NeoPixel strip;
+    int Etat;
 };
 
-#endif
-
+#endif  // AFFICHAGE_H
