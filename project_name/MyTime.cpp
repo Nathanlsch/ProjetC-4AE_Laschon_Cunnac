@@ -1,3 +1,7 @@
+/*********************************************************************
+ * @file  MyTime.cpp
+ * @brief Fichier source de la classe MyTime
+ *********************************************************************/
 #include "MyTime.h"
 
 MyTime::MyTime() : timeClient(ntpUDP, "pool.ntp.org", gmtOffset_sec){
@@ -10,14 +14,14 @@ MyTime::~MyTime(){
 }
 
 void MyTime::MajHeure() {
-  timeClient.update();
+  timeClient.update();                // Met à jour l'heure en interrogeant le serveur NTP.
   Heure[0]= timeClient.getHours();
   Heure[1] = timeClient.getMinutes();
   Heure[2] = timeClient.getSeconds();
 }
 
 void MyTime::setup(){
-  timeClient.begin();
+  timeClient.begin();                 // Démarre le client NTP
 }
 
 String MyTime::getHeure(){

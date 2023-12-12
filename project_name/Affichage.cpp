@@ -1,4 +1,8 @@
-// Affichage.cpp
+/*********************************************************************
+ * @file  Affichage.cpp
+ * @author <mettre l'adresse mail ou nom prenom>
+ * @brief Fichier source de la classe Affichage
+ *********************************************************************/
 #include "Affichage.h"
 
 Affichage::Affichage() : strip(24, 4, NEO_GRB + NEO_KHZ800) {

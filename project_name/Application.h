@@ -30,7 +30,7 @@ class Application
      * @fn Application();
      * @brief Destructeur
     */    
-    ~Application();    
+    ~Application();  
     /**
      * @fn void init(void)
      * @brief Fonction d'initialisation de l'application
@@ -43,11 +43,11 @@ class Application
     void run(void);
 
   private :
-    MyWebServer server;
-    Reservoir reservoir;
-    MyTime time;
-    Couvercle couvercle;
-    Trappe trappe;
-    Affichage affichage;
+    MyWebServer server;     // Instance de MyWebServer pour gérer le serveur web
+    Reservoir reservoir;    // Instance de Reservoir pour gérer le réservoir
+    MyTime time;            // Instance de MyTime pour gérer le temps
+    Couvercle couvercle;    // Instance de Couvercle pour gérer le couvercle
+    Trappe trappe;          // Instance de Trappe pour gérer la trappe
+    Affichage affichage;    // Instance de Affichage pour gérer le cercle de LED
 };
 #endif

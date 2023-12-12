@@ -1,34 +1,69 @@
+/*********************************************************************
+ * @file  Reservoir.h
+ * @brief Fichier d'en-tête de la classe Reservoir
+ *********************************************************************/
 #ifndef RESERVOIR_H
 #define RESERVOIR_H
 #include "Ultrasonic.h"
-#include "conf_flo.h"
+#include "conf.h"
 
+/**
+ * @class Reservoir
+ * @brief Classe Reservoir représentant le réservoir de croquettes
+ */
 class Reservoir{
     
     private:
     
     bool Vide;
-    long Dist_Fond;
-    Ultrasonic CapteurUltrason;
+    long Dist_Fond;                 // Variable representant la distance mesurée par le capteur ultrason 
+    Ultrasonic CapteurUltrason;     // Instance de capteur ultrason
     
     public:
 
-    //Constructeur
+    /**
+     * @fn Reservoir()
+     * @brief Constructeur par défaut de la classe Reservoir
+     */
     Reservoir();
-    //Destructeur
+
+    /**
+     * @fn ~Reservoir()
+     * @brief Destructeur de la classe Reservoir
+     */
     ~Reservoir();
 
-    /*getVide -> Retourne l'état du réservoir 
-    EtatReservoir retourne vrai si la distance mesurée par le capteur est supérieur à la distance max établit
-    Fonctionnement général : Capteur ultrasons capte la distance avec les croquettes
-                            Si cette distance augmente c'est que le niveau de croquettes descend.
-                            Le réservoir devient vide à partir d'une certaine distance. Donc si d > dmax => Vide = true
-                            */
-    bool getVide();          
+    /**
+     * @fn bool getVide()
+     * @brief Retourne l'état du réservoir (vide ou non)
+     * @return true si le réservoir est vide, false sinon
+     */
+    bool getVide();
+
+    /**
+     * @fn bool EtatReservoir()
+     * @brief Vérifie l'état du réservoir en fonction de la distance mesurée par le capteur
+     * @return true si la distance mesurée est supérieure à la distance maximale établie, indiquant que le réservoir est vide
+     */         
     bool EtatReservoir();
+
+    /**
+     * @fn void MAJ()
+     * @brief Met à jour les informations du réservoir
+     */
     void MAJ();
+
+    /**
+     * @fn long Pourcentage()
+     * @brief Calcule le pourcentage de remplissage du réservoir
+     * @return Pourcentage de remplissage du réservoir
+     */
     long Pourcentage();
-    //
+    
+    /**
+     * @fn void Affichage()
+     * @brief Affiche la distance mesurée par le capteur fonction de test
+     */
     void Affichage();
 };
 
