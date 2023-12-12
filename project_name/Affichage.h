@@ -4,7 +4,7 @@
  *********************************************************************/
 #ifndef AFFICHAGE_H
 #define AFFICHAGE_H
-
+#include "conf.h"
 #include <Adafruit_NeoPixel.h>
 
 class Affichage {

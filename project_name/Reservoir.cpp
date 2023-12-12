@@ -38,13 +38,12 @@ void Reservoir::Affichage() {
 }
 
 long Reservoir::Pourcentage() {
-  const long reservoirLength = 90;  // he reservoir length is 90mm
 
-  // Ensure the distance is within the valid range (0 to reservoirLength)
-  long clampedDist = std::max(0L, std::min(reservoirLength, this->Dist_Fond));
+  // S'assure que la distance est comprise dans la plage (0 et distance_fond_vide)
+  long clampedDist = std::max(0L, std::min((long)dist_fond_vide, this->Dist_Fond));
 
-  // Calculate the percentage based on linear interpolation with floating point division
-  double percentage = 100 - static_cast<double>(clampedDist - 20) / 70 * 100;
+  // Calcule le pourcentage
+  double percentage = 100 - static_cast<double>(clampedDist - Dist_Max_Capteur) / (dist_fond_vide-Dist_Max_Capteur) * 100;
 
   // Ensure that the percentage is within the valid range (0 to 100)
   percentage = std::max(0.0, std::min(100.0, percentage));

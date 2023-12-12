@@ -7,13 +7,10 @@
 using namespace std;
 
 Trappe::Trappe(){
-  ServoTrap.attach(Pin_Servo_Trappe, Servo_Angle_O,Servo_Angle_180);
+  ServoTrap.attach(Pin_Servo_Trappe, Servo_Angle_0,Servo_Angle_180);
   ServoTrap.write(Valeur_Fermeture_Trappe);
 }
 
-Trappe::~Trappe(){
-  
-}
 
 void Trappe::Open_Door(){
   ServoTrap.write(Valeur_Ouverture_Trappe);

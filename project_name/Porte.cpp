@@ -10,6 +10,10 @@ Porte::Porte(){
   
 }
 
+Porte::~Porte(){
+  
+}
+
 void Porte::Open_Door(){
   
 }

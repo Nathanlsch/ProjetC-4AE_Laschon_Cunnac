@@ -7,13 +7,9 @@
 using namespace std;
 
 Couvercle::Couvercle(){
-  ServoCouv.attach(Pin_Servo_Couvercle, Servo_Angle_O, Servo_Angle_180);
+  ServoCouv.attach(Pin_Servo_Couvercle, Servo_Angle_0, Servo_Angle_180);
   ServoCouv.write(Valeur_Fermeture_Couvercle);
   etat = 0;
-}
-
-Couvercle::~Couvercle(){
-
 }
 
 void Couvercle::Open_Door(){

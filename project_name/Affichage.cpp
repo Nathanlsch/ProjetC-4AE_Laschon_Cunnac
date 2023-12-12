@@ -5,7 +5,8 @@
  *********************************************************************/
 #include "Affichage.h"
 
-Affichage::Affichage() : strip(24, 4, NEO_GRB + NEO_KHZ800) {
+
+Affichage::Affichage() : strip(NbLed, DataIn, NEO_GRB + NEO_KHZ800) {
     Etat = 0;
     strip.begin();
     strip.setBrightness(25); // maximum 255

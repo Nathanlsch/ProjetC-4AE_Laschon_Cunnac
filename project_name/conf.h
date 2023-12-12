@@ -13,7 +13,8 @@
 // Configuration pour le réservoir
 #define Pin_Capteur_Ultrason 13  // Broche du capteur ultrason
 #define Dist_Max 0               // Distance maximale pour considérer le réservoir comme plein
-#define dist_fond_vide 90        // Distance jusqu'au fond du réservoir indiquant qu'il est vide
+#define dist_fond_vide 90.0        // Distance jusqu'au fond du réservoir indiquant qu'il est vide
+#define Dist_Max_Capteur 20      // Distance max considéré pour le capteur ne beug pas
 
 // Configuration pour la porte et ses classes filles
 #define Servo_Angle_0 580               // Angle du servo pour position 0 degré

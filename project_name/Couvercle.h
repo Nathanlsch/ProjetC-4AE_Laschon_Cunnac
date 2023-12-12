@@ -28,12 +28,6 @@ class Couvercle : public Porte{
   Couvercle();
 
   /**
-     * @fn Couvercle::~Couvercle()
-     * @brief Destructeur par défaut de la classe Couvercle
-     */
-  ~Couvercle();
-
-  /**
    * @fn void Open_Door()
    * @brief Fonction pour ouvrir le couvercle
    * Utilise la fonction write() de l'objet Servo pour définir l'angle d'ouverture du couvercle.

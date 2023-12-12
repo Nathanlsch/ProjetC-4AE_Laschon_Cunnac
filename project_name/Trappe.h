@@ -28,12 +28,6 @@ class Trappe : public Porte{
     Trappe();
 
     /**
-     * @fn Trappe::~Trappe()
-     * @brief Destructeur par défaut de la classe Trappe
-     */
-    ~Trappe();
-    
-    /**
      * @fn void Trappe::Open_Door()
      * @brief Fonction pour ouvrir la trappe
      */
